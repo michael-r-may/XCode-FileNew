@@ -35,5 +35,41 @@ You are on your own here - only you will know what these should be. Choose names
 
 ...
 
-### When to submit youe first version
+### Autolayout
+
+### Code Coverage
+
+### Enable Bitcode
+
+### Treat Warnings As Errors (GCC_TREAT_WARNINGS_AS_ERRORS)
+
+### Warn about four-char literals (GCC_WARN_FOUR_CHARACTER_CONSTANTS)
+
+### Hidden Local Variables (GCC_WARN_SHADOW)
+I would enable this. It's really not a good idea to have variables shadowing each other, as it makes reasoning about your code that much harder and, as well all know, 'Programs must be written for people to read, and only incidentally for machines to execute' - [Abelson & Sussman](http://www.amazon.com/dp/0262011530/ref=cm_sw_r_tw_dp_Ji1rxb0PAR08G)
+
+### Incorrect Uses Of Nullable Values (CLANG_WARN_NULLABLE_TO_NONNULL_CONVERSION)
+Ask yourself why you wouldn't want to know if you misused the ```_Nonnull``` (for example) and then go enable this.
+
+### Initializer not fully bracketed (GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED)
+Sure, it's a minor issue, and highly unlikely to cause problems, but you're about to start your [Sistine Chapel](https://en.wikipedia.org/wiki/Sistine_Chapel) project so why would you let a future viewer of your masterpiece spot an angel with only four fingers (when the computer can tell you first).
+
+### Out-of-Range Enum Assignments (CLANG_WARN_ASSIGN_ENUM)
+Enable this. You've created an enum for a reason, so accidentally using values outside of it must surely be something you want to know about?
+
+
+
+### Analytics
+Apple Analytics, Crashlytics, MixPanel, ARAnalytics
+
+### Crash Reporting
+Crashlytics, Apple Crash Reporting
+
+...
+
+### When to use feature toggling
+
+### When to submit your first version
 I would try to submit something to TestFlight as soon as you are able. This will not only help reassure you that the app is likely to pass review (but not guarantee) and show your beta testers what you are thinking/building but also get you into the habit of doing app submissions. 
+
+### Rate This App Prompts
