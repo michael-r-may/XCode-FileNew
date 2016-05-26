@@ -8,6 +8,8 @@ To my suprise no document seemed to exist that distilled any of this kind of kno
 
 I will begin putting my own thoughts in here, but if you find it useful, or disagree, or see something you cannot believe I missed out, pull requests are very welcome.
 
-And so, without further ado..let us begin.
+And so, without further ado..[let us begin](http://michael-r-may.github.io/Xcode-FileNew).
+
+[Go to document site](http://michael-r-may.github.io/Xcode-FileNew)
 
 
