@@ -8,8 +8,11 @@ To my suprise no document seemed to exist that distilled any of this kind of kno
 
 I will begin putting my own thoughts in here, but if you find it useful, or disagree, or see something you cannot believe I missed out, pull requests are very welcome.
 
-And so, without further ado..[let us begin](http://michael-r-may.github.io/Xcode-FileNew).
+And so, without further ado..let us begin
 
-[Go to document site](http://michael-r-may.github.io/Xcode-FileNew)
+## Project or Workspace?
+A workspace, containing the new project, is often a better choice if you think you will be using CocoaPods or have other dependencies that you would like to contain within Xcode Project Navigator and build alongside the main project.
+
+
 
 
