@@ -19,6 +19,20 @@ It's unlikely that any of them will be quite what you want out of the box, but i
 ### Product Name and Organization Name
 You are on your own here - only you will know what these should be. Choose names that you expect to appear on the app store and, remember, check the Apple Guidelines if you are unsure. Certainly avoid using names that you do not own, or which appear to be other apps, or which appear to be companions to other apps. [Coat tail riding](http://idioms.thefreedictionary.com/ride+coattails) is not cool and will probably get you rejected on submission.
 
+### Organization Identifier
+
+### Bundle Identifier
+
+### Language
+
+### Devices
+
+### Use Core Data
+
+### Include Unit Tests
+
+### Include UI Tests
+
 ...
 
 ### When to submit youe first version
