@@ -11,7 +11,9 @@ I will begin putting my own thoughts in here, but if you find it useful, or disa
 And so, without further ado..let us begin
 
 ## Project or Workspace?
-A workspace, containing the new project, is often a better choice if you think you will be using CocoaPods or have other dependencies that you would like to contain within Xcode Project Navigator and build alongside the main project.
+A workspace, containing the new project, is often a better choice if you think you will be using CocoaPods or have other dependencies that you would like to see within Xcode Project Navigator, and build alongside the main project. You can certainly postpone this decision until later, and just use a project if you want, but I like having this set up from day one so I don't have to retrain myself to open the ```myproject.xcworkspace``` instead of the ```myproject.xcodeproj```.
+
+
 
 
 
