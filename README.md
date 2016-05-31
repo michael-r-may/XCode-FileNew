@@ -50,12 +50,15 @@ Assuming your team also agree with the compromise, you can even ship for iPad an
 Apple also insist your [app must work on the iPad even if you design for iPhone](https://developer.apple.com/app-store/review/guidelines/#functionality) and will reject you if not so, really, just start out doing the right thing (tm) and sleep easier.
 
 ### Code Coverage
+You've added the unit and UI test targets right? So why would you _not_ want to know where your coverage is best, and weakest? Exactly.
 
 ### Enable Bitcode
 
 ### Treat Warnings As Errors (GCC_TREAT_WARNINGS_AS_ERRORS)
+If you turn this on before you write a single line of code, your app will still compile without problem. Then you get to feel all ninja/god/rockstar/jedi/whatever-stokes-your-ego that you [turned things up to 11](https://en.wikipedia.org/wiki/Up_to_eleven). 
 
 ### Warn about four-char literals (GCC_WARN_FOUR_CHARACTER_CONSTANTS)
+As the description says 'Warn about four-char literals (e.g., MacOS-style OSTypes: 'APPL')'. Just check the box already and know you won't ever collide with a reserved OSType and live to regret it.
 
 ### Hidden Local Variables (GCC_WARN_SHADOW)
 I would enable this. It's really not a good idea to have variables shadowing each other, as it makes reasoning about your code that much harder and, as well all know, 'Programs must be written for people to read, and only incidentally for machines to execute' - [Abelson & Sussman](http://www.amazon.com/dp/0262011530/ref=cm_sw_r_tw_dp_Ji1rxb0PAR08G)
@@ -70,16 +73,36 @@ Sure, it's a minor issue, and highly unlikely to cause problems, but you're abou
 Enable this. You've created an enum for a reason, so accidentally using values outside of it must surely be something you want to know about?
 
 ### Analytics
-Apple Analytics, Crashlytics, MixPanel, ARAnalytics
+As certain as taxes, these are my facts about Analytics; If you don't have them, you will one day be asked about them and have to retrofit them. If you do have them, you will one day be asked about some you don't have, and have to retrofit them. If you have them, and plentifully, you will one day be asked to switch provider, and have to retrofit it. 
+
+The good news is that you can get a lot, for free, and with little or no coding effort. In the no coding camp is [Apple Analytics](https://analytics.itunes.apple.com/), which have come a very long way since they first went live. These will be very valuable when you launch so get used to how they work, and what they can tell you right now (you might want to stufy the stuff around sources and campaigns, for example).
+
+Additionally for a small amount of effort you can get deeper insight with the likes of [Crashlytics](http://try.crashlytics.com/). As the name suggests you can get real-time, prioritised, crash logs from this company (this is now owned by Twitter). They now offer additional services, like analytics events and near real-time reporting on user numbers (which is almost hypnotising).
+
+For greater power, and greater expense, there is [MixPanel](https://mixpanel.com/). I've not used this, but I know others who have and they love it. Being able to tie a push notification to an analytics event (or it's absence), for example, can be very powerful in re-engaging users, without having to write custom code.
+
+Once upon a time [Flurry](https://developer.yahoo.com/analytics/) was the top dog in the app analytics world. Then people started really innovating and they did not. Yahoo now owns them (but that's about all that has changed recently).
+
+Now, as I said, it's likely you'll end up changing analytics during the life of your app, and this is a huge pain if you don't plan for it. The answer, of course, is abstraction. Thankfully, Orta already realised this and has written an abstraction layer called [ARAnalytics](https://github.com/orta/ARAnalytics).
+
+If you want to roll your own, go for it. Just remember to keep it nice and abstract.
 
 ### Crash Reporting
 Crashlytics, Apple Crash Reporting
+
+### Push Notifications
+
+
+### Fastlane
 
 ...
 
 ### When to use feature toggling
 
+### A/B Testing
+
 ### When to submit your first version
 I would try to submit something to TestFlight as soon as you are able. This will not only help reassure you that the app is likely to pass review (but not guarantee) and show your beta testers what you are thinking/building but also get you into the habit of doing app submissions. 
 
-### Rate This App Prompts
+### Using Rate This App prompts
+
