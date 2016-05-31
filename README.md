@@ -43,6 +43,11 @@ Whilst nothing like as stable, especially when in a CI environment, I would tick
 ...
 
 ### Autolayout
+When Autolayout was first introduced it was Apple's way of telling us that different screensizes were coming (and that they regretted not having this ready for the iPad, I propose) and come they did. If you are still holding out, making do with springs and struts and all that layoutSubviews fun, then this is your chance to embrace the bright new future of constraints. Sure it will bite you from time to time, and the learning curve up is going to be a headache but you'll end up writing much less code and, in most cases, it will just work. 
+
+Assuming your team also agree with the compromise, you can even ship for iPad and iPhone from one codebase, and one xib/storyboard on day one. Sure it'll be a compromise, looking for all the world like a big iPhone app (because it is) but it's a lot less ugly than the iPhone app running at 2x magnification. I find it helps smash the phone versus tablet thinking too (where does a 6 Plus fit in?) and means no retrofitting later. Instead of wasting time making it work on iPads you can spend that time making it work _better_ on iPads.
+
+Apple also insist your [app must work on the iPad even if you design for iPhone](https://developer.apple.com/app-store/review/guidelines/#functionality) and will reject you if not so, really, just start out doing the right thing (tm) and sleep easier.
 
 ### Code Coverage
 
@@ -63,8 +68,6 @@ Sure, it's a minor issue, and highly unlikely to cause problems, but you're abou
 
 ### Out-of-Range Enum Assignments (CLANG_WARN_ASSIGN_ENUM)
 Enable this. You've created an enum for a reason, so accidentally using values outside of it must surely be something you want to know about?
-
-
 
 ### Analytics
 Apple Analytics, Crashlytics, MixPanel, ARAnalytics
