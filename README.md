@@ -20,18 +20,25 @@ It's unlikely that any of them will be quite what you want out of the box, but i
 You are on your own here - only you will know what these should be. Choose names that you expect to appear on the app store and, remember, check the Apple Guidelines if you are unsure. Certainly avoid using names that you do not own, or which appear to be other apps, or which appear to be companions to other apps. [Coat tail riding](http://idioms.thefreedictionary.com/ride+coattails) is not cool and will probably get you rejected on submission.
 
 ### Organization Identifier
+This will form the prefix of your Bundle Identifier and is typically a reverse domain name. For example ```com.mydomain``` will be combined with your product name (say, ```MyApp```) to form the bundle identifier ```com.mydomain.MyApp```.
 
 ### Bundle Identifier
+This will be created by Xcode, for you, from the product name and bundle identifier.
 
 ### Language
+I would assert that, unless you have a good reason to believe otherwise, Swift is the only option for a brand new project. There may be reasons not to, but given you can bridge back to Objective-C if you need to, the reasons so start a project in Objective-C are small.
 
 ### Devices
+This probably needs a discussion with the wider team; from the product manager, designer and possibly others, the implications of going Universal (my recommendation) from the start are too big to not consider in advance. But, if you can embrace autolayout and a Universal app, you will avoid back-loading your development effort when you decide one day to support the iPad too. That being said, the effort of designing, and testing, for multiple form factors should not be underestimated.
 
 ### Use Core Data
+If you don't need Core Data on day one, I would avoid ticking this and retrofit it later. And then, of course, there is the fact that the boiler plate code is huge, and ends up all in your AppDelegate. Which is ugly, wrong and well, just ugly and wrong will do fine.  
 
 ### Include Unit Tests
+You can add a unit testing target later, with relative ease, so this is not an all-or-nothing decision either, but I would suggest that merely having the target there will help coax you into writing tests. Nature, and developers, abhore a void and an empty test target is a void of disapproval.
 
 ### Include UI Tests
+Whilst nothing like as stable, especially when in a CI environment, I would tick this box too and try to get a few of your core journeys working reliably on your own machine at least. That way you can hit [cmd+u](https://developer.apple.com/library/mac/recipes/xcode_help-test_navigator/RunningTests/RunningTests.html) before you run off to to lunch and have that warm fuzzy feeling before you later hit [Submit](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/SubmittingYourApp/SubmittingYourApp.html).
 
 ...
 
