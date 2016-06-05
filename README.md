@@ -55,6 +55,9 @@ You've added the unit and UI test targets right? So why would you _not_ want to 
 ### Enable Bitcode (ENABLE_BITCODE)
 TBC
 
+### Pendantic Warnings (GCC_WARN_PEDANTIC)
+As the description of the flag tells you (Issue all the warnings demanded by strict ISO C and ISO C++). Now, you might never write a line of C or C++ in your app (Swift FTW!) but having this enabled means that if you do decide to head down that route someday (maybe via a third party library, or using a [shared core](http://oleb.net/blog/2014/05/how-dropbox-uses-cplusplus-cross-platform-development/)) then you've already set do not do bad things. 
+
 ### Treat Warnings As Errors (GCC_TREAT_WARNINGS_AS_ERRORS)
 If you turn this on before you write a single line of code, your app will still compile without problem. Then you get to feel all ninja/god/rockstar/jedi/whatever-stokes-your-ego that you [turned things up to 11](https://en.wikipedia.org/wiki/Up_to_eleven). 
 
@@ -72,6 +75,8 @@ Sure, it's a minor issue, and highly unlikely to cause problems, but you're abou
 
 ### Out-of-Range Enum Assignments (CLANG_WARN_ASSIGN_ENUM)
 Enable this. You've created an enum for a reason, so accidentally using values outside of it must surely be something you want to know about?
+
+
 
 ### Analytics
 As certain as taxes, these are my facts about Analytics; If you don't have them, you will one day be asked about them and have to retrofit them. If you do have them, you will one day be asked about some you don't have, and have to retrofit them. If you have them, and plentifully, you will one day be asked to switch provider, and have to retrofit it. 
