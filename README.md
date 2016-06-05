@@ -52,7 +52,8 @@ Apple also insist your [app must work on the iPad even if you design for iPhone]
 ### Code Coverage
 You've added the unit and UI test targets right? So why would you _not_ want to know where your coverage is best, and weakest? Exactly.
 
-### Enable Bitcode
+### Enable Bitcode (ENABLE_BITCODE)
+TBC
 
 ### Treat Warnings As Errors (GCC_TREAT_WARNINGS_AS_ERRORS)
 If you turn this on before you write a single line of code, your app will still compile without problem. Then you get to feel all ninja/god/rockstar/jedi/whatever-stokes-your-ego that you [turned things up to 11](https://en.wikipedia.org/wiki/Up_to_eleven). 
@@ -88,21 +89,24 @@ Now, as I said, it's likely you'll end up changing analytics during the life of 
 If you want to roll your own, go for it. Just remember to keep it nice and abstract.
 
 ### Crash Reporting
-Crashlytics, Apple Crash Reporting
+TBC: Crashlytics, Apple Crash Reporting
 
 ### Push Notifications
-
+TBC: 
 
 ### Fastlane
+TBC: 
 
 ...
 
 ### When to use feature toggling
+TBC: 
 
 ### A/B Testing
+TBC: 
 
 ### When to submit your first version
 I would try to submit something to TestFlight as soon as you are able. This will not only help reassure you that the app is likely to pass review (but not guarantee) and show your beta testers what you are thinking/building but also get you into the habit of doing app submissions. 
 
 ### Using Rate This App prompts
-
+TBC: 
