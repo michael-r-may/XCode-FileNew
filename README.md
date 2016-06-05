@@ -61,6 +61,9 @@ As the description of the flag tells you (Issue all the warnings demanded by str
 ### Treat Warnings As Errors (GCC_TREAT_WARNINGS_AS_ERRORS)
 If you turn this on before you write a single line of code, your app will still compile without problem. Then you get to feel all ninja/god/rockstar/jedi/whatever-stokes-your-ego that you [turned things up to 11](https://en.wikipedia.org/wiki/Up_to_eleven). 
 
+### Empty Loop Bodies (CLANG_WARN_EMPTY_BODY)
+You've got a loop with nothing in it? If you're doing this for any reason that involves the words 'timing' or 'slowing' or 'race' then consider yourself in my bad books. But whatever your reasons, let's be honest, a loop over nothing is code smelly and you probably want to know you've done it so you can either justify yourself or, hopefully, just realise you meant to put something in there.
+
 ### Warn about four-char literals (GCC_WARN_FOUR_CHARACTER_CONSTANTS)
 As the description says 'Warn about four-char literals (e.g., MacOS-style OSTypes: 'APPL')'. Just check the box already and know you won't ever collide with a reserved OSType and live to regret it.
 
